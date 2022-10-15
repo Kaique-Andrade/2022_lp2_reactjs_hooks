@@ -1,24 +1,28 @@
 import React from 'react'
 import Accordion from './Accordion'
+import Busca from './Busca'
+import './Accordion.css'
+
+const itens = [
+  {
+    titulo: "Java",
+    conteudo: "Linguagem compilada e interpretada."
+  },
+  {
+    titulo: "Python",
+    conteudo: "Linguagem interpretada e dinamicamente tipada."
+  },
+  {
+    titulo: "Javascript",
+    conteudo: "Interpretada. Executa do lado do clinente e do lado do servidor também."
+  }
+]
 
 const App = () => {
-  const itens = [
-    {
-      titulo: "Java",
-      conteudo: "Linguagem compilada e interpretada."
-    },
-    {
-      titulo: "Python",
-      conteudo: "Linguagem interpretada e dinamicamente tipada."
-    },
-    {
-      titulo: "Javascript",
-      conteudo: "Interpretada. Executa do lado do clinente e do lado do servidor também."
-    }
-  ]
+  const expressaoJSX = <Busca />
   return (
     <div>
-      <Accordion itens={itens}/>
+      {expressaoJSX}
     </div>
   )
 }
